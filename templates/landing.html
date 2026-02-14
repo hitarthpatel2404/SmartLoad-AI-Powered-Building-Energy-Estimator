@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SmartLoad | AI Energy Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="bg-blur-blob blob-1"></div>
+    <div class="bg-blur-blob blob-2"></div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">SmartLoad</div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#how-it-works">Process</a></li>
+            </ul>
+            <a href="{{ url_for('index') }}" class="nav-btn">Get Started</a>
+        </div>
+    </nav>
+
+    <section id="hero" class="hero-section">
+        <div class="container">
+            <h1>Predict Your Building's <br><span class="gradient-text">Energy Footprint</span></h1>
+            <p class="hero-subtitle">Use advanced machine learning to estimate heating and cooling loads instantly.</p>
+            <a href="{{ url_for('index') }}" class="nav-btn btn-hero">Try the Calculator</a>
+        </div>
+    </section>
+
+    <section id="features">
+        <div class="container">
+            <h2 class="section-main-title">Why Choose SmartLoad?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Smart Algorithms</h3>
+                    <p>Models trained on validated engineering data.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Instant Results</h3>
+                    <p>Get kWh estimates in under 10 seconds.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Design Ready</h3>
+                    <p>Perfect for sustainable building optimization.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="steps-section">
+        <div class="container">
+            <div class="section-header">
+                <h3 class="section-tag">HOW IT WORKS</h3>
+                <h2 class="section-title">Three Simple Steps</h2>
+                <p class="section-subtitle">From input to insight in under 10 seconds.</p>
+            </div>
+
+            <div class="steps-grid">
+                <div class="step-item">
+                    <div class="step-icon-wrapper">
+                        
+                        <div class="icon-box">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect><path d="M9 14h6"></path><path d="M9 18h6"></path><path d="M9 10h6"></path></svg>
+                        </div>
+                    </div>
+                    <h3>Enter Parameters</h3>
+                    <p>Input your building's surface area, wall area, and overall height into the calculator.</p>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-icon-wrapper">
+                        
+                        <div class="icon-box">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                        </div>
+                    </div>
+                    <h3>Smart Analysis</h3>
+                    <p>Our algorithm processes the data using validated energy estimation models.</p>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-icon-wrapper">
+                        
+                        <div class="icon-box">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m13 2-2 10h3L11 22l2-10h-3l2-10z"></path></svg>
+                        </div>
+                    </div>
+                    <h3>Get Results</h3>
+                    <p>Receive instant heating and cooling load estimates in kilowatt-hours.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Estimator | SmartLoad</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body>
+    <div class="bg-blur-blob blob-1"></div>
+    <div class="bg-blur-blob blob-2"></div>
+
+    <div class="calc-container">
+        <div class="card">
+            <a href="{{ url_for('landing') }}" class="back-link-modern">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                Back to Home
+            </a>    
+            <h2 class="form-title">Building Energy Estimator</h2>
+            <p class="form-subtitle">Complete all 8 parameters for your AI prediction.</p>
+            
+            <form id="prediction-form">
+                <div class="form-row">
+                    <div class="form-group"><label>Compactness (X1)</label><input type="number" step="0.01" name="X1" placeholder="0.6-0.9" required></div>
+                    <div class="form-group"><label>Surface Area (X2)</label><input type="number" step="0.1" name="X2" placeholder="500-800" required></div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group"><label>Wall Area (X3)</label><input type="number" step="0.1" name="X3" placeholder="240-420" required></div>
+                    <div class="form-group"><label>Roof Area (X4)</label><input type="number" step="0.1" name="X4" placeholder="110-220" required></div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group"><label>Overall Height (X5)</label><input type="number" step="0.1" name="X5" placeholder="3.5 or 7.0" required></div>
+                    <div class="form-group">
+                        <label>Orientation (X6)</label>
+                        <select name="X6">
+                            <option value="2">North</option><option value="3">East</option>
+                            <option value="4">South</option><option value="5">West</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group"><label>Glazing Area (X7)</label><input type="number" step="0.05" name="X7" placeholder="0.0-0.4" required></div>
+                    <div class="form-group"><label>Glazing Dist (X8)</label><input type="number" step="1" name="X8" placeholder="0-5" required></div>
+                </div>
+                <button type="submit" class="btn-calculate-modern" id="submit-btn">
+                    <span id="btn-text">Calculate Performance</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 7-7 7 7"></path><path d="M12 19V5"></path></svg>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div id="resultModal" class="modal">
+        <div class="modal-content">
+            <h2 class="result-title">Results Ready!</h2>
+            <div class="result-display">
+                <p><strong>Heating Load:</strong> <span id="heating-val"></span> kWh</p>
+                <p><strong>Cooling Load:</strong> <span id="cooling-val"></span> kWh</p>
+            </div>
+            <button onclick="closeModal()" class="nav-btn close-modal-btn">Close</button>
+        </div>
+    </div>
+</body>
+</html>
